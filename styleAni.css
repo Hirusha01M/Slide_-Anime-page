@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+header span {
+    color: #222;
+}
+
+div.container1 {
+    font-family: Raleway;
+    margin: 0 auto;
+    padding: 2em 3em;
+    text-align: left;
+}
+
+div.container1 a {
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.bac {
+    background: #9292f1;
+}
+
+div.topBotomBordersOut a:before, div.topBotomBordersOut a:after {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.topBotomBordersOut a:before {
+    top: 0px;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersOut a:after {
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+
+div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #9292f1;
+}
+.container input{
+    appearance: none;
+}
+.container .dots{
+    position: absolute;
+    bottom: 180px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+.container .dots label{
+    width: 23px;
+    height: 23px;
+    background: #857f7f;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.4;
+    border: 2px solid #fff;
+}
+.container input:nth-child(1):checked ~ .dots label:nth-child(1),
+.container input:nth-child(2):checked ~ .dots label:nth-child(2),
+.container input:nth-child(3):checked ~ .dots label:nth-child(3),
+.container input:nth-child(4):checked ~ .dots label:nth-child(4),
+.container input:nth-child(5):checked ~ .dots label:nth-child(5){
+    opacity: 1;
+}
+.container .slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.container .slider .slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--img);
+    background-size: cover;
+    clip-path: circle(0% at 0% 50%);
+    transition: 1.2s;
+    transition-delay: 0s;
+    background-position: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.container .slider .slide:nth-child(even){
+    clip-path: circle(0% at 100% 50%);
+    background-position: right;
+}
+.container input:nth-child(1):checked ~ .slider .slide:nth-child(1),
+.container input:nth-child(2):checked ~ .slider .slide:nth-child(2),
+.container input:nth-child(3):checked ~ .slider .slide:nth-child(3),
+.container input:nth-child(4):checked ~ .slider .slide:nth-child(4),
+.container input:nth-child(5):checked ~ .slider .slide:nth-child(5){
+    clip-path: circle(150% at 50% 50%);
+    transition-delay: 0.4s;
+    background-position: center;
+}
+.textSec{
+    position: relative;
+    padding: 100px 100px 320px 50px;;
+    max-width: 650px;
+}
+.textSec h2{
+    font-size: 45px;
+    font-weight: 600;
+    color: #e6eff1;
+    padding-bottom: 30px;
+}
+.textSec h3{
+    font-size: 30px;
+    font-weight: 400;
+    color: #fcf6f6;
+    padding-bottom: 22Spx;
+   
+}
+.textSec p{
+    font-size: 18px;
+    line-height: 26px;
+    color: #ffffff;
+}
